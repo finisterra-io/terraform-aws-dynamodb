@@ -40,20 +40,8 @@ variable "write_capacity" {
   default     = null
 }
 
-variable "write_max_capacity" {
-  description = "The max number of write units for this table. If the billing_mode is PROVISIONED, this field should be greater than 0"
-  type        = number
-  default     = null
-}
-
 variable "read_capacity" {
   description = "The number of read units for this table. If the billing_mode is PROVISIONED, this field should be greater than 0"
-  type        = number
-  default     = null
-}
-
-variable "read_max_capacity" {
-  description = "The max number of read units for this table. If the billing_mode is PROVISIONED, this field should be greater than 0"
   type        = number
   default     = null
 }
@@ -134,70 +122,6 @@ variable "autoscaling_enabled" {
   description = "Whether or not to enable autoscaling. See note in README about this setting"
   type        = bool
   default     = false
-}
-
-variable "autoscaling_read_enabled" {
-  description = "Whether or not to enable autoscaling for table read."
-  type        = bool
-  default     = false
-}
-
-variable "autoscaling_write_enabled" {
-  description = "Whether or not to enable autoscaling for table writes."
-  type        = bool
-  default     = false
-}
-
-variable "autoscaling_defaults" {
-  description = "A map of default autoscaling settings"
-  type        = map(string)
-  default = {
-    scale_in_cooldown  = 0
-    scale_out_cooldown = 0
-    target_value       = 70
-  }
-}
-
-variable "table_read_policy_name" {
-  description = "Name of the read autoscaling policy"
-  type        = string
-  default     = null
-}
-
-variable "table_write_policy_name" {
-  description = "Name of the write autoscaling policy"
-  type        = string
-  default     = null
-}
-
-variable "index_read_policy_name" {
-  description = "Name of the index read autoscaling policy"
-  type        = string
-  default     = null
-}
-
-variable "index_write_policy_name" {
-  description = "Name of the index write autoscaling policy"
-  type        = string
-  default     = null
-}
-
-variable "autoscaling_read" {
-  description = "A map of read autoscaling settings. `max_capacity` is the only required key. See example in examples/autoscaling"
-  type        = map(string)
-  default     = {}
-}
-
-variable "autoscaling_write" {
-  description = "A map of write autoscaling settings. `max_capacity` is the only required key. See example in examples/autoscaling"
-  type        = map(string)
-  default     = {}
-}
-
-variable "autoscaling_indexes" {
-  description = "A map of index autoscaling configurations. See example in examples/autoscaling"
-  type        = map(map(string))
-  default     = {}
 }
 
 variable "table_class" {
