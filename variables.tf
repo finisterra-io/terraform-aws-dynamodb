@@ -78,8 +78,13 @@ variable "local_secondary_indexes" {
 
 variable "replica_regions" {
   description = "Region names for creating replicas for a global DynamoDB table."
-  type        = any
-  default     = []
+  type = list(object({
+    region_name            = string
+    kms_key_arn            = optional(string)
+    propagate_tags         = optional(bool)
+    point_in_time_recovery = optional(bool)
+  }))
+  default = []
 }
 
 variable "stream_enabled" {
