@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.4](https://github.com/finisterra-io/terraform-aws-dynamodb/compare/v1.0.3...v1.0.4) (2024-03-08)
+
+
+### Bug Fixes
+
+* add tags ([df6a473](https://github.com/finisterra-io/terraform-aws-dynamodb/commit/df6a4735a86b68757eed4365c681abf59806e83c))
+
 ### [1.0.3](https://github.com/finisterra-io/terraform-aws-dynamodb/compare/v1.0.2...v1.0.3) (2024-03-08)
 
 
