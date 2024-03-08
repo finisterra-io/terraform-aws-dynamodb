@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.3](https://github.com/finisterra-io/terraform-aws-dynamodb/compare/v1.0.2...v1.0.3) (2024-03-08)
+
+
+### Bug Fixes
+
+* tags all autoscaling ([825c157](https://github.com/finisterra-io/terraform-aws-dynamodb/commit/825c157e188fe4e4eddb21ca7b339eb6760e0ca8))
+
 ### [1.0.2](https://github.com/finisterra-io/terraform-aws-dynamodb/compare/v1.0.1...v1.0.2) (2024-03-01)
 
 
