@@ -6,7 +6,7 @@ resource "aws_appautoscaling_target" "this" {
   resource_id        = "table/${try(aws_dynamodb_table.autoscaled_gsi_ignore[0].name)}"
   scalable_dimension = each.value.scalable_dimension
   service_namespace  = "dynamodb"
-    lifecycle {
+  lifecycle {
     ignore_changes = [
       tags_all,
     ]
