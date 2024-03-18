@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.5](https://github.com/finisterra-io/terraform-aws-dynamodb/compare/v1.0.4...v1.0.5) (2024-03-18)
+
+
+### Bug Fixes
+
+* add tfsec ([97fda52](https://github.com/finisterra-io/terraform-aws-dynamodb/commit/97fda528aaea8fc96ed1357c01d7bd77b99e23d6))
+
 ### [1.0.4](https://github.com/finisterra-io/terraform-aws-dynamodb/compare/v1.0.3...v1.0.4) (2024-03-08)
 
 
