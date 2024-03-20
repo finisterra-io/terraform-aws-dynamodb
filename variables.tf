@@ -102,7 +102,7 @@ variable "stream_view_type" {
 variable "server_side_encryption_enabled" {
   description = "Whether or not to enable encryption at rest using an AWS managed KMS customer master key (CMK)"
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "server_side_encryption_kms_key_arn" {
