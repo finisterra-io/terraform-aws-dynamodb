@@ -17,7 +17,7 @@ resource "aws_appautoscaling_target" "this" {
 resource "aws_appautoscaling_policy" "this" {
   # Use the lookup function to provide a default value if policy_name key does not exist
   for_each = var.create_table ? {
-    for k, v in var.autoscaling : k => v if lookup(v, "policy_name", "") != ""
+    for k, v in var.autoscaling : k => v if v.policy_name != null && v.policy_name != ""
   } : {}
 
   name               = each.value.policy_name
