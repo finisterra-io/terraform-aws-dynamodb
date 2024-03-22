@@ -149,6 +149,16 @@ variable "ignore_changes_global_secondary_index" {
 
 variable "autoscaling" {
   description = "A map of autoscaling settings. `max_capacity` is the only required key. See example in examples/autoscaling"
-  type        = map(any)
-  default     = {}
+  type = map(object({
+    max_capacity           = number
+    min_capacity           = number
+    scalable_dimension     = string
+    tags                   = optional(map(string))
+    policy_name            = optional(string)
+    predefined_metric_type = optional(string)
+    scale_in_cooldown      = optional(number)
+    scale_out_cooldown     = optional(number)
+    target_value           = optional(number)
+  }))
+  default = {}
 }
